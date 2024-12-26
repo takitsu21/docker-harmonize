@@ -1,4 +1,4 @@
-FROM arm64v8/python:3.12-slim
+FROM arm64v8/python:3.13-slim
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
 
 WORKDIR /app/harmonize
