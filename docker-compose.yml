@@ -1,0 +1,9 @@
+services:
+  harmonize:
+    container_name: harmonize
+    image: docker.io/takizz21/harmonize:latest-amd64
+    volumes:
+      - ./data:/data
+    devices:
+      - /dev/video0:/dev/video0
+    restart: unless-stopped

@@ -1,4 +1,4 @@
-FROM arm64v8/python:3.13-slim
+FROM arm64v8/python:3.12-slim
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
 
 WORKDIR /app/harmonize
@@ -13,4 +13,4 @@ RUN git clone https://github.com/takitsu21/HarmonizeProject.git /app/harmonize
 
 RUN uv sync --frozen
 
-CMD [ "uv", "run", "harmonize.py", "-a", "8"]
+CMD [ "uv", "run", "harmonize.py", "-a", "5", "-l", "0"]

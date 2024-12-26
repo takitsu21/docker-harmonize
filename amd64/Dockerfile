@@ -1,4 +1,4 @@
-FROM python:3.13-slim
+FROM python:3.12-slim
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
 
 WORKDIR /app/harmonize
@@ -11,6 +11,7 @@ RUN apt-get update && apt-get install -y \
 
 RUN git clone https://github.com/takitsu21/HarmonizeProject.git /app/harmonize
 
-RUN uv sync --frozen
+RUN uv sync
 
-CMD [ "uv", "run", "harmonize.py", "-a", "8"]
+CMD [ "uv", "run", "harmonize.py", "-a", "5", "-l", "0"]
+
