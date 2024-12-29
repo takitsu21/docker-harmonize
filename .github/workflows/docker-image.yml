@@ -10,7 +10,7 @@ on:
 
 jobs:
   build:
-    runs-on: ss-script-alert-1-script-1931df1f-3873-48a8-8922-229c70c413d0
+    runs-on: [self-hosted]
 
     steps:
     - name: Checkout repository
